@@ -1,0 +1,20 @@
+!!!
+
+%a{href: "/"} New search
+
+%p= "Repos found: #{@presenter.total_count}"
+
+%p= "Showing results from #{@presenter.first_item_in_page_count} to #{@presenter.last_item_in_page_count}"
+
+- if @presenter.has_previous_page?
+  %a{href: @presenter.path_to_previous_page} <-- Previous page
+
+- if @presenter.has_next_page?
+  %a{href: @presenter.path_to_next_page} Next page -->
+
+
+%ul 
+  - @presenter.items.each do |item|
+    %li
+      %a{href: item[:html_url]}= item[:full_name]
+      
