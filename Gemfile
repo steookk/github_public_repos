@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'thin', '~> 1.7.2'
 
-gem 'sinatra', '~> 2.0.8'
+gem 'sinatra', '~> 2.2.0'
 gem 'activesupport', '~> 6.0'
 gem 'haml', '~> 5.1.2'
 
